@@ -8,6 +8,8 @@ var result = multiply(5);
 var person = new PersonOldStyle("Roland", "Guijt");
 var p = new Person("Roland", "Guijt");
 
+p.DoWork();
+
 [Experimental("PersonFeature")]
 public class PersonOldStyle
 {
@@ -31,6 +33,7 @@ public class Person(string firstName, string lastName)
     {
         Console.WriteLine(FirstName);
         FirstName = "John";
+        Console.WriteLine(FirstName);
     }
 }
 
