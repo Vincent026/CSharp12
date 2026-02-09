@@ -3,6 +3,7 @@ using Coordinate = (int x, int y);
 var c = new Coordinate(20, 30);
 
 var multiply = (int x = 0) => x * 2;
+var divide = (int i = 1) => i / 2;
 var result = multiply(5);
 
 var person = new PersonOldStyle("Roland", "Guijt");
@@ -38,8 +39,10 @@ public class Person(string firstName, string lastName)
 }
 
 public class Employee(string firstName, string lastName, int salary)
-    :Person (firstName, lastName)
+    : Person(firstName, lastName)
 {
+    public int Salary { get; } = salary;
+
     public void GoToWork()
     {
         Console.WriteLine(FirstName);
